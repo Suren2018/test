@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Templates</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="
+    sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .tooltip-inner {
+            font-size: 90%;
+        }
+        .home-offer-banner{
+            margin-top: 56px;
+        }       
+        .product {
+            transition: all 400ms ease;
+        }
+        
+        .product:hover {
+            box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1)!important;
+            margin-top: -3px;
+        }
+        
+        .product .original-price {
+            text-decoration: line-through;
+        }
+        
+        .product .short-icons {
+            margin-top: -5px;
+        }
+        
+        .breadcrumb-item+.breadcrumb-item::before {
+            padding-right: .2rem;
+        }
+        
+        .breadcrumb-item+.breadcrumb-item {
+            padding-left: .2rem;
+        }
+        
+        .container {
+            max-width: 1484px;
+            margin: 0 auto;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                padding: 5px;
+                margin-top: 10px;
+            }
+            .navbar-collapse.show {
+                border-color: #eee;
+            }
+        }
+        
+        @media only screen (min-width: 769px) and (max-width: 1349px) {
+            .container {
+                width: 100%;
+                padding: 0 calc((100% - 1228px)/ 2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white small shadow-sm">
+        <a class="navbar-brand" href="#">My Logo</a>
+        <button class="btn btn-outline-secondary border navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars py-1"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Abouts Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Products Categories
+            </a>
+                    <div class="dropdown-menu small" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item small" href="#">Category1</a>
+                        <a class="dropdown-item small" href="#">Category2</a>
+                        <a class="dropdown-item small" href="#">Category3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <a href="#" class="btn btn-danger btn-sm" id="priceButton"><i class="fa fa-user mr-2"></i>Sign In</a>
+                <button type="button" class="btn btn-outline-secondary btn-sm ml-2"><i class="fa fa-shopping-cart mr-2"></i>Add to cart</button>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-white home-offer-banner mb-3 mb-md-0">
+        <div class="container-fluid px-0">
+            <img src="offer.jpg" class="w-100">
+        </div>
+    </section>
+    <section class="bg-light py-md-5 overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-xl-2 filters mb-4 mb-md-0 px-2 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                    <ul class="breadcrumb small alert alert-secondary px-2 bg-white" role="navigation" aria-label="Breadcrumbs">
+                        <li class="breadcrumb-item"><a href="#">All</a></li>
+                        <li class="breadcrumb-item"><a href="#">Books</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Academic</li>
+                    </ul>
+                    <div class="filter-cat bg-white p-2">
+                        <div>
+                            <button class="btn btn-link h6 mb-2 p-0" type="button">Categories</button>
+                            <ul class="filters border-bottom pb-2 pl-0 small">
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">Books</label>
+                                    </div>
+                                    <span class="text-dark">20,589</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pt-1" for="customCheck2">Furniture</label>
+                                    </div>
+                                    <span class="text-dark">589</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button class="btn btn-link h6 mb-2 p-0" type="button">Sort By</button>
+                            <ul class="filters border-bottom pb-2 pl-0 small">
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">Recent</label>
+                                    </div>
+                                    <span class="text-dark">589</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pt-1" for="customCheck2">Most Popular</label>
+                                    </div>
+                                    <span class="text-dark">1589</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button class="btn btn-link h6 mb-2 p-0" type="button">Price</button>
+                            <ul id="collapseThree" class="filters border-bottom pb-2 pl-0 small">
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">Low to High</label>
+                                    </div>
+                                    <span class="text-dark">10,589</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pt-1" for="customCheck2">High to Low</label>
+                                    </div>
+                                    <span class="text-dark">589</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button class="btn btn-link h6 mb-2 p-0" type="button">Discount</button>
+                            <ul id="collapseFour" class="filters border-bottom pb-2 pl-0 small">
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">10% - 20%</label>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pt-1" for="customCheck2">20% - 30%</label>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">30% - 50%</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button class="btn btn-link h6 mb-2 p-0" type="button">Brands</button>
+                            <ul id="collapseFive" class="filters border-bottom pb-2 pl-0 small">
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">My brand 1</label>
+                                    </div>
+                                    <span class="text-dark">1589</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pt-1" for="customCheck2">My brand 2</label>
+                                    </div>
+                                    <span class="text-dark">589</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label pt-1" for="customCheck1">My brand 3</label>
+                                    </div>
+                                    <span class="text-dark">689</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label pt-1" for="customCheck2">My brand 4</label>
+                                    </div>
+                                    <span class="text-dark">389</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9 col-lg-9 col-xl-10 px-2 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                    <div class="d-flex align-items-center justify-content-between text-nowrap">
+                        <ul class="nav nav-tabs mb-3 w-100" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="books-tab" data-toggle="tab" href="#books" role="tab" aria-controls="books" aria-selected="true">Books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="furniture-tab" data-toggle="tab" href="#furniture" role="tab" aria-controls="furniture" aria-selected="false">Furniture</a>
+                            </li>
+                        </ul>
+                        <div class="pagination  border-bottom">
+                            <span class="a-size-base-plus a-color-tertiary pagination">Page 1 of 7</span>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="books" role="tabpanel" aria-labelledby="books-tab">
+                            <div id="prod-collections-books" class="row px-2 prod-collections books">
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <button class="delete-node position-absolute btn btn-danger btn-sm" style="right: 7px;"><i class="fa fa-trash"></i></button>
+                                        <a href="#" class="badge badge-primary position-absolute">Best Seller</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-vector/kid-world-book-day_24908-59735.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">20% Off</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/book-library-with-open-textbook_1150-5918.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-danger position-absolute">New</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/front-view-pile-books-with-copy-space_23-2148255858.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">30% Off</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/set-books-ladders_23-2148207614.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">Most Sale</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://img.freepik.com/free-photo/open-student-book-with-red-apple_144627-6635.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">20% Off</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://img.freepik.com/free-photo/blue-backpack-with-books-wooden-table_23-2148207616.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">Best Seller</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://img.freepik.com/free-photo/composition-books-globe_23-2148207622.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">20% Off</a>
+                                        <a title="Best Book" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-vector/kid-world-book-day_24908-59735.jpg" alt="Best Book" width="340" height="225" title="Best Book">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="furniture" role="tabpanel" aria-labelledby="furniture-tab">
+                            <div id="prod-collections-furniture" class="row px-2 prod-collections furniture">
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">Best Seller</a>
+                                        <a title="furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/3d-contemporary-living-room-interior-modern-furniture_1048-10265.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">20% Off</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/comfortable-armchair-room-decorated_1048-2932.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-danger position-absolute">New</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/outdoor-patio-garden-with-sofa-chair-pillow-decoration_74190-9542.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">30% Off</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-vector/kitchen-interior-witn-wooden-furniture-cartoon_107791-298.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">Most Sale</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/couch-with-many-cushions_1203-323.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">20% Off</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-vector/modern-interior-with-yellow-sofa_1441-3957.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">Best Seller</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://image.freepik.com/free-photo/comfortable-pillow-sofa-decoration-with-light-lamp-interior_74190-9506.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 px-2 prod">
+                                    <div class="product bg-white rounded-lg shadow-sm h-100">
+                                        <a href="#" class="badge badge-primary position-absolute">20% Off</a>
+                                        <a title="Furniture" href="#">
+                                            <img class="w-100 rounded-top" src="https://img.freepik.com/free-photo/empty-vintage-royal-blue-armchair-against-black-background_23-2147937464.jpg" alt="Furniture" width="340" height="225" title="Furniture">
+                                        </a>
+                                        <div class="p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="mb-0 small w-75 text-truncate" title="Physiology - myBook Medical">Physiology - myBook Medical</h6>
+                                                <div class="short-icons">
+                                                    <button class="btn btn-link text-danger p-0 btn-sm" data-toggle="tooltip" data-placement="top" title="bookmark this book"><i class="fa fa-bookmark"></i></button>
+                                                    <button class="btn btn-link text-danger p-0 ml-1 btn-sm"><i class="fa fa-share"></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <span class="small">By <a href="#">myBrand </a></span>
+                                                <div class="ratings small">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-empty text-primary"></i>
+                                                    <i class="fa fa-star-o"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="price">
+                                                    <span class="original-price text-muted small mr-1">&#8377;799</span>
+                                                    <span class="modified-price"><i class="fa fa-rupee mr-1"></i>599</span>
+                                                    <span class="price-off small">(20% off)</span>
+                                                </div>
+                                                <button class="btn btn-primary py-0 ml-1 btn-sm buy-now"><i class="fa fa-cart"></i>Buy Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-light py-3">
+        <div class="container">
+            <div>
+                <a class="btn btn-link p-0 text-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    MyLogo - <span class="text-muted">@ All rights reserved</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        // Wow animation
+        new WOW().init();
+
+        // Tooltip 
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        // Delete product from collection
+        var productList = document.getElementsByClassName("prod");
+        var deleteNode = document.getElementsByClassName("fa-trash");        
+        
+        deleteNode[0].onclick = function(pro) { 
+            for (var i=0; i < productList.length; i++) {
+                productList[0].style.display = "none";
+            }
+        };
+
+    </script>
+</body>
+
+</html>
