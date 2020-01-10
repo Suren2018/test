@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Templates</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="
+    sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Roboto', sans-serif;
+        }
+        .home-banner {
+            background: url(banner.jpg) no-repeat top;
+            min-height: 100vh;
+            background-position: top center;
+            background-size: cover;
+        }
+        .bottom-message{
+            background: url(footer-top-bg.jpg) no-repeat top;
+            background-position: bottom center;
+            background-size: contain;
+        }
+        .container {
+            max-width: 1524px;
+            margin: 0 auto;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                padding: 5px;
+                margin-top: 10px;
+            }
+            .navbar-collapse.show {
+                border-color: #eee;
+            }
+        }
+
+        @media only screen and (min-width: 1025px){
+            .intro-para p{
+                max-width: 75%;
+                margin: 0 auto;
+            }
+            .customer-view h3 {
+                width: 75%;
+                margin-bottom: 16px;
+            }
+            .bottom-message h1{
+                font-size: 40px;
+                max-width: 75%;
+                margin: 0 auto;
+            }
+            .newsletter h5{
+                max-width: 50%;
+                margin: 0 auto;
+            }
+        }
+        
+        @media only screen and (min-width: 769px) and (max-width: 1349px) {
+            .container {
+                width: 100%;
+                padding: 0 calc((100% - 1228px)/ 2);
+            }            
+        }
+
+        .bottom-message h1{
+            margin-bottom: 200px;
+        }
+        footer{
+            background-color: #107c10;
+        }
+        .info p{
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        .social-nav a {
+            width: 40px;
+            height: 40px;
+        }
+        .social-nav a:hover {
+            color: #107c10 !important;
+        }
+        .welcome-block p{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .menu-btn{
+            top: 50px;
+            right: 50px;
+            z-index: 9;
+        }
+        .menu-btn.focus, .menu-btn:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default my-nav-bar" role="navigation">  
+          <div class="w-100 my-menu"> 
+              <button href="#" class="btn btn-trnsparent border-0 position-absolute menu-btn" data-toggle="collapse" data-target="#collapse-menu">
+                    <i class="fa fa-bars py-1"></i>
+              </button>
+  
+              <div id="collapse-menu" class="collapse">
+                <ul class="navbar-nav mr-auto text-center py-5 position-absolute bg-white w-100" style="left: 0;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Abouts Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+              </div>
+          </div>
+  </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-white bg-white small shadow-sm d-none">
+        <button class="btn btn-outline-secondary border navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars py-1"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Abouts Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Products Categories
+            </a>
+                    <div class="dropdown-menu small" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item small" href="#">Category1</a>
+                        <a class="dropdown-item small" href="#">Category2</a>
+                        <a class="dropdown-item small" href="#">Category3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home-banner mb-3 mb-md-0">
+        <div class="container-fluid px-0 py-5 text-center">
+            <a href="#">
+                <img src="Logo.jpg" width="170" class="img-fluid">
+            </a>
+        </div>
+    </section>
+    <section class="welcome-block bg-white py-md-5 overflow-hidden">
+        <div class="container">
+            <div class="text-center intro-para py-4 py-md-5">
+                <h1 class="mb-4 display-4">Welcome to Dreamscape</h1>
+                <p class="mb-4 col-md-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis saepe aut ipsum, laborum accusamus assumenda ab? Autem harum totam iure perspiciatis, amet quasi voluptatibus tempore nostrum labore! Tenetur, aliquam. amet quasi voluptatibus tempore nostrum labore! Tenetur, aliquam.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-sm-4 mb-md-0 px-5 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay="0s">
+                    <div class="figure mb-4">
+                        <img src="post1.jpg" alt="post" class="img-fluid">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h3 class="mb-0">Communities</h3>
+                        <a href="#"><i class="fa fa-long-arrow-right fa-lg"></i></a>
+                    </div>
+                    <p class="mb-4">ipsum dolor sit amet consectetur adipisicing elit. In facilis saepe aut ipsum</p>
+                </div>
+                <div class="col-md-4 mb-sm-4 mb-md-0 px-5 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                    <div class="figure mb-4">
+                        <img src="post2.jpg" alt="post" class="img-fluid">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h3 class="mb-0">Our Concept</h3>
+                        <a href="#"><i class="fa fa-long-arrow-right fa-lg"></i></a>
+                    </div>
+                    <p class="mb-4">ipsum dolor sit amet consectetur adipisicing elit. In facilis saepe aut ipsum</p>
+                </div>
+                <div class="col-md-4 mb-sm-4 mb-md-0 px-5 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay="1s">
+                    <div class="figure mb-4">
+                        <img src="post3.jpg" alt="post" class="img-fluid">
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h3 class="mb-0">About Founder</h3>
+                        <a href="#"><i class="fa fa-long-arrow-right fa-lg"></i></a>
+                    </div>
+                    <p class="mb-4">ipsum dolor sit amet consectetur adipisicing elit. In facilis saepe aut ipsum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light py-5 px-lg-5 px-0 overflow-hidden">
+        <div class="container">
+            <h2 class="mb-5">Listen from our Happy <br> Customers</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-content">
+                        <iframe class="w-100"  width="560" height="315" src="https://www.youtube.com/embed/Td_x6e3g2FA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="customer-view px-md-5">
+                        <h3>The friendly and professional way you made our deal.</h3>
+                        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis deleniti facere, corporis velit, excepturi enim nemo blanditiis cupiditate impedit animi tempora repudiandae esse, quaerat accusamus laboriosam ratione laborum neque.</p>
+                        <h3>Dantley Davis</h3>
+                        <h5>Founder and Managing Director</h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-content">
+                        <iframe class="w-100"  width="560" height="315" src="https://www.youtube.com/embed/Td_x6e3g2FA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="customer-view px-md-5">
+                        <h3>The friendly and professional way you made our deal.</h3>
+                        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis deleniti facere, corporis velit, excepturi enim nemo blanditiis cupiditate impedit animi tempora repudiandae esse, quaerat accusamus laboriosam ratione laborum neque.</p>
+                        <h3>John Doe</h3>
+                        <h5>Managing Director</h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-content">
+                        <iframe class="w-100"  width="560" height="315" src="https://www.youtube.com/embed/Td_x6e3g2FA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="customer-view px-md-5">
+                        <h3>The friendly and professional way you made our deal.</h3>
+                        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis deleniti facere, corporis velit, excepturi enim nemo blanditiis cupiditate impedit animi tempora repudiandae esse, quaerat accusamus laboriosam ratione laborum neque.</p>
+                        <h3>David Daniel</h3>
+                        <h5>Manager</h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="bottom-message py-5">
+    <div class="container">
+        <div class="text-center">
+            <div class="py-5">
+                <h1>Going back to the roots and finding everlasting <span class="text-success">JOY</span> & <span class="text-success">HAPPINESS</span> from living in hormony with nature</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter bg-light py-5">
+    <div class="container">
+        <div class="text-center py-5">
+            <h2 class="display-4 mb-4">Do you want to know more?</h2>
+            <h5 class="mb-4">Don't miss the latest updates about our current and upcoming project. Subscribe Now!</h5>
+            <div class="d-md-flex justify-content-center col-md-4 mx-auto">
+                <div class="w-100 mb-4 mb-md-0">
+                    <input class="form-control py-4 pl-4" type="email" placeholder="Email address" aria-label="email">
+                </div>
+                <div>
+                    <button class="btn btn-lg ml-2 shadow btn-success" type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="text-white pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 border-right border-light mb-4 mb-md-0">
+                    <div class="row">
+                        <div class="col-md-6 text-center mb-4 mb-md-0">
+                            <a href="#">
+                                <img src="logo-green.png" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="col-md-6 info font-weight-light pr-md-5">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis rerum earum nihil corporis dolor sit amet consectetur adipisicing elit dolor</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <ul class="list-unstyled pl-md-5 font-weight-light">
+                                <li><a href="#" class="nav-link text-white">Home</a></li>
+                                <li><a href="#" class="nav-link text-white">Concepts</a></li>
+                                <li><a href="#" class="nav-link text-white">Company</a></li>
+                                <li><a href="#" class="nav-link text-white">Communities</a></li>
+                                <li><a href="#" class="nav-link text-white">NRI Supports</a></li>
+                                <li><a href="#" class="nav-link text-white">Contact Us</a></li>
+                            </ul>                            
+                        </div>
+                        <div class="col-md-8">
+                            <p><strong>Address</strong></p>
+                            <a href="#" class="mb-3 text-white d-block font-weight-light">8-8-611/4.5.6, Plot No. 122, First floor, 
+                                Srinivasa Nagar Colony, Karmanghat,
+                                Hyderabad, Telangana - 500079
+                            </a >
+                            <p><strong>Email: </strong><a class="text-light font-weight-light" href="mailto:info@nnrdreamscape.com">info@nnrdreamscape.com</a></p>
+                            <p><strong>Contact: </strong><a class="text-light font-weight-light" href="tel:+919581033322">+919581033322</a>, <a class="text-light font-weight-light" href="tel:+919581033322">+919581033355</a class="text-light"></p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="text-center">
+                <ul class="nav social-nav justify-content-center border-0 mt-5">
+                    <li class="nav-item mr-3">
+                       <a class="btn btn-outline-light rounded-circle p-0 d-flex justify-content-center align-items-center">
+                          <i class="fa fa-facebook"></i>
+                       </a>
+                    </li>
+                    <li class="nav-item mr-3">
+                       <a class="btn btn-outline-light rounded-circle p-0 d-flex justify-content-center align-items-center">
+                          <i class="fa fa-twitter"></i>
+                       </a>
+                    </li>
+                    <li class="nav-item mr-3">
+                       <a class="btn btn-outline-light rounded-circle p-0 d-flex justify-content-center align-items-center">
+                          <i class="fa fa-instagram"></i>
+                       </a>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+        <div class="copyright bg-success py-3 mt-5 text-center small">
+            <p class="text-light mb-0 font-weight-light">NNR Dreamscape &copy; 2018 All Right Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        // Wow animation
+        new WOW().init();
+    </script>
+</body>
+</html>
