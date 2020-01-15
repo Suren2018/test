@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Templates</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="
+    sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #000000;
+            background: -webkit-gradient(linear, left top, right top, color-stop(30%, #000000), to(#6f6f6f));
+            background: linear-gradient(90deg, #000000 30%, #6f6f6f 100%);
+        }
+        
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar-brand{
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .logo-area h6{
+            margin-top: -4px;
+        }
+        .navbar li a {
+            color: #333;
+            border-bottom: 3px solid transparent;
+            transition: all .7s;
+        }
+        .navbar li>a:hover {
+            color: #000000;
+            border-color: #FFD012;
+        }
+        @media (min-width: 992px){
+            .navbar-expand-lg .navbar-nav .nav-link {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+        .home-tagline h1{
+            text-shadow: 4px 4px 10px #000;
+        }
+        .widget h3:after {
+            display: block;
+            content: '';
+            width: 30px;
+            height: 4px;
+            background: #FFD012;
+            border-radius: 4px;
+            margin-top: 7px;
+        }
+        .main-content-area .home-post-title a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .card-header .author a{
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar-collapse {
+                border-top: 1px solid transparent;
+                padding: 5px;
+                margin-top: 10px;
+            }
+            .navbar-collapse.show {
+                border-color: #eee;
+            }
+        }
+        @media only screen and (min-width: 769px) {
+            .fixed-top {
+                position: sticky !important;
+            }
+            nav{
+                margin-bottom: 60px !important;
+            }
+            .sidebar{
+                border-left: #e4e4e4 1px solid;
+                padding-left: 15px !important;
+            }
+            .sidebar .widget img{
+                max-width: 80px;
+            }
+            .sidebar .widget h5 {
+                max-height: 45px;
+                overflow: hidden;
+                margin-bottom: 0;
+                line-height: 1;
+            }
+            .sidebar .widget h5 a {
+                color: #222;
+                font-size: 16px;
+            }
+            .main-content-area .home-post-title a {
+                font-size: 24px;
+            }
+            main:after, main::before,
+            section.home-tagline:after, 
+            section.home-tagline:before {                 
+                font-family: fontawesome;
+                font-size: 100px;
+                position: absolute;                
+                top: 10%;
+                opacity: .07;
+            }
+            section.home-tagline:after {
+                content: "\f27b";
+                right: 5%;
+            }
+            section.home-tagline:before {
+                content: "\f044";
+                right: 12%;
+                top: 35%;
+                font-size: 60px;
+            }
+            main:after, 
+            main:before{
+                content: "\f085";
+                left: 3%;
+                top: 20%;
+                opacity: .35;
+            }
+            main:before{
+                left: 30%;
+                top: 35%;
+                font-size: 70px;
+            }
+        }
+        @media only screen and (min-width: 769px) and (max-width: 1349px) {
+            .container {
+                width: 100%;
+                padding: 0 calc((100% - 1228px)/ 2);
+            }            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-light shadow-sm py-3">
+        <div class="logo-area">
+            <a class="navbar-brand text-dark py-0" href="#">Meratech</a>
+            <h6 class="small mb-0">Learn to Know Now or Never</h6>
+        </div>
+        <button class="btn btn-outline-secondary border navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars py-1"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About me</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Python-Networks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Linux Basics</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Blogs
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right small" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item small" href="#">Routing Protocols</a>
+                        <a class="dropdown-item small" href="#">MPLS</a>
+                        <a class="dropdown-item small" href="#">Packet Wireshark</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TCP/IP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SDN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="home-tagline py-5 text-center text-light">
+        <div class="container">
+            <h1 class="mb-0 display-4 font-weight-bold">Learn to Know Now or Never...</h1>
+        </div>
+    </section>
+    <main class="container my-5"> 
+        <section class="filters pt-4 pb-2 overflow-hidden bg-dark text-light row rounded-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Search here...</h3>
+                    </div>
+                    <div class="col-md-4 ml-auto search_filter">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <span class="input-group-text" id="basic-addon2">Search</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content-area overflow-hidden rounded-bottom bg-light row">
+            <div class="container">
+                <div class="row">  
+                    <div class="py-md-5 order-md-2 col-md-3 sidebar mb-4 mb-md-0 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                        <div class="widget">
+                            <h3 class="font-weight-bold mb-4">Recent Post</h3>                            
+                            <article class="d-md-flex align-items-center mb-3 pb-3 border-bottom">
+                                <a href="#">
+                                    <img class="img-fluid rounded" width="80" src="http://meratech.in/wp-content/uploads/2019/03/ARP.png" alt="">
+                                </a>
+                                <div class="ml-md-2">
+                                    <time class="small" datetime="2018-10-06">October 6, 2018</time>
+                                    <h5><a href="#">Spectacular designs of animals in polygonal style</a></h5>
+                                </div>
+                            </article>
+                            <article class="d-md-flex align-items-center mb-3 pb-3 border-bottom">
+                                <a href="#">
+                                    <img class="img-fluid rounded" width="80" src="http://meratech.in/wp-content/uploads/2019/03/ARP.png" alt="">
+                                </a>
+                                <div class="ml-md-2">
+                                    <time class="small" datetime="2018-10-06">October 6, 2018</time>
+                                    <h5><a href="#">Spectacular designs of animals in polygonal style</a></h5>
+                                </div>
+                            </article>
+                            <article class="d-md-flex align-items-center mb-3 pb-3 border-bottom">
+                                <a href="#">
+                                    <img class="img-fluid rounded" width="80" src="http://meratech.in/wp-content/uploads/2019/03/ARP.png" alt="">
+                                </a>
+                                <div class="ml-md-2">
+                                    <time class="small" datetime="2018-10-06">October 6, 2018</time>
+                                    <h5><a href="#">Spectacular designs of animals in polygonal style</a></h5>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="sidebar-archives" class="widget mb-3 border-bottom pb-3">
+                            <h3 class="font-weight-bold mb-4">Archives</h3>
+                            <div class="widget-wrap">
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">January 2020</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">March 2019</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">November 2017</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">October 2017</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">September 2017</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">June 2017</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">May 2017</a>
+                                <!-- <ul class="list-unstyled">
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2020/01/">January 2020</a></li>
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2019/03/">March 2019</a></li>
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2017/11/">November 2017</a></li>
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2017/10/">October 2017</a></li>
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2017/09/">September 2017</a></li>
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2017/06/">June 2017</a></li>
+                                    <li class="mb-3 pb-3 border-bottom"><a href="http://meratech.in/2017/05/">May 2017</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div id="sidebar-tags" class="widget">
+                            <h3 class="font-weight-bold mb-4">Tags</h3>
+                            <div class="widget-wrap">
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">Routing Protocols</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">MPLS</a>
+                                <a class="mb-2 mr-2 btn btn-sm btn-warning" href="http://meratech.in/2020/01/">Packet_Wireshark</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-md-5 order-md-1 col-md-9 blog-content mb-4 mb-md-0 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-secondary text-light">
+                                <div class="post-title d-md-flex">
+                                    <time class="text-center mr-2 pr-2 border-right d-none d-md-block small" title="January, 2020">
+                                        <span class="post-month d-block">January</span>
+                                        <span class="post-year d-block">2020</span>
+                                    </time>
+                                    <div class="title-wrap d-md-flex w-100">
+                                        <h3 class="title home-post-title entry-title">
+                                            <a href="#">Types of Address resolution Protocol(ARP)</a>
+                                        </h3>
+                                        <span class="ml-auto d-none d-md-block small">
+                                            <i class="fa fa-pencil mr-1"></i> <span class="author"><a href="#" title="Posts by Meratech" rel="author">Meratech</a></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-md-flex">
+                                <div class="post-img shadow-sm mr-3 col-md-3 px-0">
+                                    <img class="img-fluid rounded p-3 bg-light" src="http://meratech.in/wp-content/uploads/2019/03/ARP.png" alt="">
+                                </div>
+                                <div class="post-details">
+                                    <p class="card-text">A route learned by one ibgp peer won’t be advertised to another ibgp peer. This is called BGP split horizon rule. This rule is used to avoid loop in ibgp cases. To mitigate this, we have following option by which one ibgp learned routes can be advertised to another ibgp peer. BGP full mesh BGP</p>
+                                    <a href="#" class="btn btn-md btn-outline-secondary read-more">Read More</a>
+                                </div>                              
+                            </div>
+                        </div>
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-secondary text-light">
+                                <div class="post-title d-md-flex">
+                                    <time class="text-center mr-2 pr-2 border-right d-none d-md-block small" title="January, 2020">
+                                        <span class="post-month d-block">January</span>
+                                        <span class="post-year d-block">2020</span>
+                                    </time>
+                                    <div class="title-wrap d-md-flex w-100">
+                                        <h3 class="title home-post-title entry-title">
+                                            <a href="#">Types of Address resolution Protocol(ARP)</a>
+                                        </h3>
+                                        <span class="ml-auto d-none d-md-block small">
+                                            <i class="fa fa-pencil mr-1"></i> <span class="author"><a href="#" title="Posts by Meratech" rel="author">Meratech</a></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-md-flex">
+                                <div class="post-img shadow-sm mr-3 col-md-3 px-0">
+                                    <img class="img-fluid rounded p-3 bg-light" src="http://meratech.in/wp-content/uploads/2019/03/ARP.png" alt="">
+                                </div>
+                                <div class="post-details">
+                                    <p class="card-text">A route learned by one ibgp peer won’t be advertised to another ibgp peer. This is called BGP split horizon rule. This rule is used to avoid loop in ibgp cases. To mitigate this, we have following option by which one ibgp learned routes can be advertised to another ibgp peer. BGP full mesh BGP</p>
+                                    <a href="#" class="btn btn-md btn-outline-secondary read-more">Read More</a>
+                                </div>                              
+                            </div>
+                        </div>
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header bg-secondary text-light">
+                                <div class="post-title d-md-flex">
+                                    <time class="text-center mr-2 pr-2 border-right d-none d-md-block small" title="January, 2020">
+                                        <span class="post-month d-block">January</span>
+                                        <span class="post-year d-block">2020</span>
+                                    </time>
+                                    <div class="title-wrap d-md-flex w-100">
+                                        <h3 class="title home-post-title entry-title">
+                                            <a href="#">Types of Address resolution Protocol(ARP)</a>
+                                        </h3>
+                                        <span class="ml-auto d-none d-md-block small">
+                                            <i class="fa fa-pencil mr-1"></i> <span class="author"><a href="#" title="Posts by Meratech" rel="author">Meratech</a></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-md-flex">
+                                <div class="post-img shadow-sm mr-3 col-md-3 px-0">
+                                    <img class="img-fluid rounded p-3 bg-light" src="http://meratech.in/wp-content/uploads/2019/03/ARP.png" alt="">
+                                </div>
+                                <div class="post-details">
+                                    <p class="card-text">A route learned by one ibgp peer won’t be advertised to another ibgp peer. This is called BGP split horizon rule. This rule is used to avoid loop in ibgp cases. To mitigate this, we have following option by which one ibgp learned routes can be advertised to another ibgp peer. BGP full mesh BGP</p>
+                                    <a href="#" class="btn btn-md btn-outline-secondary read-more">Read More</a>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-light text-center py-3">
+        <div class="container">
+            <div>
+                <a class="btn btn-link p-0 text-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Meratech - <span class="text-muted">© 2020 All rights reserved.</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        // Wow animation
+        new WOW().init();
+    </script>
+</body>
+</html>
