@@ -24,9 +24,6 @@
         h1,h2,h3,h4,h5,h6 {
             font-family: 'Roboto', sans-serif;
         }
-        nav{
-            margin-bottom: 60px !important;
-        }
         .navbar-brand{
             font-size: 36px;
             font-weight: bold;
@@ -70,7 +67,11 @@
         .card-header .author a{
             color: #fff;
         }
-
+        .sidebar .widget h5 a {
+            color: #222;
+            font-size: 16px;
+        }
+        
         @media only screen and (max-width: 768px) {
             .navbar-collapse {
                 border-top: 1px solid transparent;
@@ -79,6 +80,9 @@
             }
             .navbar-collapse.show {
                 border-color: #eee;
+            }
+            .home-tagline{
+                margin-top: 100px;
             }
         }
         @media only screen and (min-width: 769px) {
@@ -97,11 +101,7 @@
                 overflow: hidden;
                 margin-bottom: 0;
                 line-height: 1;
-            }
-            .sidebar .widget h5 a {
-                color: #222;
-                font-size: 16px;
-            }
+            }            
             .main-content-area .home-post-title a {
                 font-size: 24px;
             }
@@ -212,7 +212,7 @@
         <section class="main-content-area overflow-hidden rounded-bottom bg-light row">
             <div class="container">
                 <div class="row">  
-                    <div class="py-md-5 order-md-2 col-md-3 sidebar mb-4 mb-md-0 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                    <div class="py-5 order-md-2 col-md-3 sidebar mb-4 mb-md-0 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
                         <div class="widget">
                             <h3 class="font-weight-bold mb-4">Recent Post</h3>                            
                             <article class="d-md-flex align-items-center mb-3 pb-3 border-bottom">
@@ -273,7 +273,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="py-md-5 order-md-1 col-md-9 blog-content mb-4 mb-md-0 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
+                    <div class="py-5 order-md-1 col-md-9 blog-content mb-4 mb-md-0 wow bounceInUp animted" data-wow-duration="2s" data-wow-delay=".5s">
                         <div class="card shadow-sm mb-4">
                             <div class="card-header bg-secondary text-light">
                                 <div class="post-title d-md-flex">
